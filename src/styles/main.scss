@@ -1,0 +1,42 @@
+@import "./blocks/grid.scss";
+@import "./blocks/mixin";
+@import "./blocks/utils/variables";
+@import "./blocks/header.scss";
+@import "./blocks/nav.scss";
+@import "./blocks/service.scss";
+@import "./blocks/page.scss";
+@import "./blocks/description.scss";
+@import "./blocks/button.scss";
+@import "./blocks/footer.scss";
+@import "./blocks/contacts.scss";
+@import "./blocks/text.scss";
+@import "./blocks/pricing.scss";
+@import "./blocks/column.scss";
+@import "./blocks/about.scss";
+@import "./blocks/slider.scss";
+
+#map {
+  height: 400px;
+  width: 100%;
+}
+
+body {
+  font-family: 'EB Garamond', serif;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Cormorant Garamond', serif;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, p, ul {
+  margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 70px;
+
+  @include onDesktop {
+    // padding: 0 20px;
+  }
+}

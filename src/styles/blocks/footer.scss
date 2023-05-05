@@ -1,0 +1,77 @@
+.footer {
+  background: black;
+  padding: 50px 55px;
+
+  &__text {
+    padding: 10px 0;
+  
+    &-small {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 16px;
+      color: $primeColor;
+
+    }
+
+    &-large {
+      font-family: 'EB Garamond', serif;
+      font-size: 26px;
+      color: white;
+    }
+
+    &-bottom {
+      color: rgb(166,166,166);
+      font-family: 'EB Garamond', serif;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+  }
+
+  &__icons {
+    margin-top: 30px;
+  }
+
+  &__container {
+    padding: 34px 20px;
+
+
+    @include onDesktop {
+      margin: 0 auto;
+      padding: 50px 0px;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+
+    &-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    &-item {
+      padding: 10px 0;
+    }
+
+    &-link {
+      color: $textColor;
+      text-decoration: none;
+      font-size: 16px;
+      font-family: 'Open Sans', sans-serif;
+  
+      &:hover {
+        color: #fff;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__bottom {
+    padding: 20px 0;
+    &-copyterms {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

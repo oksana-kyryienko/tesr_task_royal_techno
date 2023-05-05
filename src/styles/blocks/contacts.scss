@@ -1,0 +1,23 @@
+.contacts {
+  background: #212121;
+  padding: 80px 0;
+
+}
+
+.contactstwo {
+  padding: 80px 0;
+  background: black;
+  
+  &__title {
+    margin: 15px 0;
+  }
+}
+
+.contactsthree {
+  background: black;
+}
+
+.ic {
+  display: inline-flex;
+  margin-left: 15px;
+}

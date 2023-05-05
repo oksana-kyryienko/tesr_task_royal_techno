@@ -1,0 +1,29 @@
+.about {
+  background: #212121;
+  padding: 80px 0;
+}
+
+.abouttwo {
+  padding: 80px 0;
+  background: black;
+
+  &__photo-container {
+    object-position: center;
+    width: 100%;
+  
+    margin-top: 50px;
+  
+  }
+  
+  &__image {
+    object-position: right;
+    width: 100%;
+    height: 390px;
+  
+    transition: transform 0.3s;
+  
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
