@@ -48,3 +48,15 @@
 .h {
   margin-bottom: 20px;
 }
+
+@media screen and (max-width: 690px)  {
+  .description__img {
+    height: 330px;
+  }
+}
+
+@media screen and (max-width: 890px)  {
+  .description__img {
+    height: 420px;
+  }
+}

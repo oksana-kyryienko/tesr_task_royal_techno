@@ -2,10 +2,12 @@ const links = document.querySelectorAll("nav a");
 const pages = document.querySelectorAll(".article");
 function showPage(targetPage) {
   pages.forEach(page => {
-    page.style.display = "none";
+    if (page.id === targetPage) {
+      page.classList.remove("hidden");
+    } else {
+      page.classList.add("hidden");
+    }
   });
-  const targetPageElement = document.getElementById(targetPage);
-  targetPageElement.style.display = "block";
 }
 links.forEach(link => {
   link.addEventListener("click", () => {
@@ -13,9 +15,12 @@ links.forEach(link => {
     showPage(targetPage);
   });
 });
-const bookVisitButton = document.getElementById('book-visit');
-bookVisitButton.addEventListener('click', () => {
-  const targetPage = 'contact';
+document.addEventListener("DOMContentLoaded", () => {
+  showPage("description");
+});
+const bookVisitButton = document.getElementById("book-visit");
+bookVisitButton.addEventListener("click", () => {
+  const targetPage = "contact";
   showPage(targetPage);
 });
 function initMap() {
@@ -159,12 +164,10 @@ let currentIndex = 0;
 function showSlide(index) {
   for (let i = 0; i < slides.length; i++) {
     let slideIndex = (index + i) % slides.length;
-    if (i < 4) {
-      slides[slideIndex].style.display = 'block';
-    } else {
-      slides[slideIndex].style.display = 'none';
-    }
+    slides[slideIndex].style.display = 'block';
+    slides[slideIndex].style.order = i;
   }
+  currentIndex = index;
 }
 function nextSlide() {
   currentIndex = (currentIndex + 1) % slides.length;
@@ -177,3 +180,15 @@ function prevSlide() {
 showSlide(currentIndex);
 prevBtn.addEventListener('click', prevSlide);
 nextBtn.addEventListener('click', nextSlide);
+const burgerButton = document.querySelector('.burger');
+const menu = document.querySelector('.menu');
+const nav = document.querySelector('.menu__list');
+burgerButton.addEventListener('click', function () {
+  menu.classList.toggle('open');
+  if (burgerButton.classList.contains('open')) {
+    nav.style.display = 'none';
+  } else {
+    nav.style.display = 'flex';
+  }
+  burgerButton.classList.toggle('open');
+});

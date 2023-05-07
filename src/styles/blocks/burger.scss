@@ -1,0 +1,35 @@
+.burger {
+  display: none;
+  cursor: pointer;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+}
+
+.burger__line {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: $primeColor;
+  transition: transform 0.3s ease-in-out;
+}
+
+.burger.open .burger__line:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.burger.open .burger__line:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.open .burger__line:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+
+@media screen and (max-width: 768px)  {
+  .burger {
+    display: block;
+  }
+}

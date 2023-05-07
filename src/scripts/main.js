@@ -3,10 +3,12 @@ const pages = document.querySelectorAll(".article");
 
 function showPage(targetPage) {
   pages.forEach((page) => {
-    page.style.display = "none";
+    if (page.id === targetPage) {
+      page.classList.remove("hidden");
+    } else {
+      page.classList.add("hidden");
+    }
   });
-  const targetPageElement = document.getElementById(targetPage);
-  targetPageElement.style.display = "block";
 }
 
 links.forEach((link) => {
@@ -16,12 +18,17 @@ links.forEach((link) => {
   });
 });
 
-const bookVisitButton = document.getElementById('book-visit');
+document.addEventListener("DOMContentLoaded", () => {
+  showPage("description");
+});
 
-bookVisitButton.addEventListener('click', () => {
-  const targetPage = 'contact';
+const bookVisitButton = document.getElementById("book-visit");
+
+bookVisitButton.addEventListener("click", () => {
+  const targetPage = "contact";
   showPage(targetPage);
 });
+
 
 function initMap() {
   const map = new google.maps.Map(document.getElementById("map"), {
@@ -226,12 +233,10 @@ let currentIndex = 0;
 function showSlide(index) {
   for (let i = 0; i < slides.length; i++) {
     let slideIndex = (index + i) % slides.length;
-    if (i < 4) {
-      slides[slideIndex].style.display = 'block';
-    } else {
-      slides[slideIndex].style.display = 'none';
-    }
+    slides[slideIndex].style.display = 'block';
+    slides[slideIndex].style.order = i;
   }
+  currentIndex = index;
 }
 
 function nextSlide() {
@@ -248,4 +253,22 @@ showSlide(currentIndex);
 
 prevBtn.addEventListener('click', prevSlide);
 nextBtn.addEventListener('click', nextSlide);
+
+
+const burgerButton = document.querySelector('.burger');
+const menu = document.querySelector('.menu');
+const nav = document.querySelector('.menu__list');
+
+burgerButton.addEventListener('click', function() {
+    menu.classList.toggle('open');
+    if (burgerButton.classList.contains('open')) {
+      nav.style.display = 'none';
+    } else {
+      nav.style.display = 'flex';
+    }
+    burgerButton.classList.toggle('open');
+});
+
+
+
 

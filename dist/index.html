@@ -17,7 +17,7 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Open+Sans:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
     <script
       src="https://kit.fontawesome.com/a19b7a72ee.js"
       crossorigin="anonymous"
@@ -65,6 +65,13 @@
           </div>
           <div class="line"></div>
         </div>
+        <button class="burger">
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
+        
+        
         <nav class="page__menu" id="menu">
           <div class="menu">
             <div class="menu__logo logo__box">
@@ -108,7 +115,7 @@
       </div>
     </header>
     <main>
-      <section class="article" id="services">
+      <section class="article hidden" id="services">
         <section class="page__section services">
           <div class="container">
             <div class="services__content page__section-content">
@@ -121,21 +128,22 @@
             </div>
           </div>
         </section>
-      </section>
-      <section class="page__section servicestwo">
-        <div class="container">
-          <div>
-            <div></div>
-            <div></div>
+        <section class="page__section servicestwo">
+          <div class="container">
+            <div>
+              <div></div>
+              <div></div>
+            </div>
+            <div>
+              <div></div>
+              <div></div>
+            </div>
           </div>
-          <div>
-            <div></div>
-            <div></div>
-          </div>
-        </div>
+        </section>
       </section>
+      
 
-      <section class="description article" id="description">
+      <section class="description article visible" id="description">
         <div class="container">
           <div class="description__flex">
             <div class="description__img">
@@ -163,7 +171,7 @@
         </div>
       </section>
 
-      <section class="page__section article" id="contacts">
+      <section class="page__section article hidden" id="contacts">
         <section class="contacts">
           <div class="container">
             <div class="contacts__content page__section-content">
@@ -265,7 +273,7 @@
         </section>
       </section>
 
-      <section class="page__section article" id="pricing">
+      <section class="page__section article hidden" id="pricing">
         <section class="pricing">
           <div class="container">
             <div class="contacts__content page__section-content">
@@ -419,7 +427,7 @@
         </section>
       </section>
 
-      <section class="page__section article" id="about">
+      <section class="page__section article hidden" id="about">
         <section class="about">
           <div class="container">
             <div class="about__content page__section-content">
@@ -472,11 +480,11 @@
           <div class="container">
             <div class="slider">
               <div class="slides">
-                <img class="slides__img" src="./images/inst.png" alt="Slide 1" />
-                <img class="slides__img" src="./images/inst1.png" alt="Slide 2" />
-                <img class="slides__img" src="./images/inst2.png" alt="Slide 3" />
-                <img class="slides__img" src="./images/inst5.png" alt="Slide 4" />
-                <div class="slides__img slides__square sq">
+                <img class="slides__img slide" src="./images/inst.png" alt="Slide 1" />
+                <img class="slides__img slide" src="./images/inst1.png" alt="Slide 2" />
+                <img class="slides__img slide" src="./images/inst2.png" alt="Slide 3" />
+                <img class="slides__img slide" src="./images/inst5.png" alt="Slide 4" />
+                <div class="slides__img slide slides__square sq">
                   <a class="text__link" href="https://www.instagram.com/" target="_blank">Follow us<i class="fa-brands fa-instagram"></i></a>
                 </div>
                 
@@ -485,6 +493,20 @@
               <button class="next slides__btn">Next</button>
             </div>
 
+          </div>
+        </section>
+      </section>
+      <section class="article hidden" id="portfolio">
+        <section class="page__section portfolio">
+          <div class="container">
+            <div class="services__content page__section-content">
+              <h2 class="page__section-title">Portfolio</h2>
+              <div class="breadcrumb">
+                <p class="breadcrumb__text">
+                  HOME > <span class="breadcrumb__span">Portfolio</span>
+                </p>
+              </div>
+            </div>
           </div>
         </section>
       </section>

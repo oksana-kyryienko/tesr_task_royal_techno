@@ -59,3 +59,22 @@
     height: 15px;
   }
 }
+
+@media screen and (max-width: 768px)  {
+
+  .menu {
+    &__logo {
+      display: none;
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__list {
+      flex-direction: column;
+      display: none;
+    }
+  }
+}
