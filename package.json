@@ -4,8 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run sass && npm run babel && xcopy src\\index.html dist\\index.html /y && xcopy /s /i src\\images dist\\images\\",
+    "sass": "sass src/styles/main.scss dist/css/main.css",
+    "babel": "babel src/scripts/main.js -d dist/scripts/main.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.21.5",
+    "@babel/core": "^7.21.8",
+    "@babel/preset-env": "^7.21.5"
+  }
 }
