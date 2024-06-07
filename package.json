@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npm run sass && npm run babel && xcopy src\\index.html dist\\index.html /y && xcopy /s /i src\\images dist\\images\\",
+    "build": "npm run sass && npm run babel && xcopy index.html dist\\index.html /y && xcopy /s /i src\\images dist\\images\\",
     "sass": "sass src/styles/main.scss dist/css/main.css",
     "babel": "babel src/scripts/main.js -d dist/scripts/main.js"
   },
